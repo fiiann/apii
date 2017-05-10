@@ -39,7 +39,7 @@ class DbHandler {
             $api_key = $this->generateApiKey();
 
             // insert query
-            $stmt = $this->conn->prepare("INSERT INTO user(username, nim, password, api_key) values(?, ?, ?, ?)");
+            $stmt = $this->conn->prepare("INSERT INTO user(username, nim, password_hash, api_key) values(?, ?, ?, ?)");
             $stmt->bind_param("ssss", $username, $nim, $password_hash, $api_key);
 
             $result = $stmt->execute();

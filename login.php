@@ -10,7 +10,7 @@
 	$nim=$_POST['nim'];
 	$password=$_POST['password'];
 
-	$url="http://localhost/kuliah/ppl/api/v1/login";
+	$url="http://pplasik.96.lt/v1/login";
 
 	curl_setopt_array($curl, array(
 	  CURLOPT_URL => $url,
